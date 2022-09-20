@@ -27,8 +27,18 @@ function getInfo() {
   for (var i = 0; i < objPeople.length; i++) {
     // check is user input matches username and password of a current index of the objPeople array
 
-    if (username == objPeople[i].username && password == objPeople[i].password) {
+    if (username == "Mads" && password == "123") {
       window.location.href = "http://stackoverflow.com";
+      // stop the function if this is found to be true
+      return;
+    }
+    if (username == "Alex" && password == "123") {
+      window.location.href = "http://youtube.com";
+      // stop the function if this is found to be true
+      return;
+    }
+    if (username == "123" && password == "123") {
+      window.location.href = "http://github.com";
       // stop the function if this is found to be true
       return;
     }
