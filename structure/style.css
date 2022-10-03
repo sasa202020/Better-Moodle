@@ -1,17 +1,134 @@
 :root {
-  --bgColorDarkn: #1c153c;
-  --iconsnFontLightM: #1c153c;
-  --sectionFillDark: #2d264c;
-  --whiteTextnIcons: #ffffff;
-  --bgColorLight: #fbfaff;
-  --buttonBlue: #ccd6ff;
-  --green: #42d98a;
-  --red: #ff6474;
-  --orange: #fda759;
+    --bgColorDarkn: #1c153c;
+    --iconsnFontLightM: #1c153c;
+    --sectionFillDark: #2d264c;
+    --whiteTextnIcons: #ffffff;
+    --bgColorLight: #fbfaff;
+    --buttonBlue: #ccd6ff;
+    --green: #42d98a;
+    --red: #ff6474;
+    --orange: #fda759;
+    --violet: #8198F6;
 }
-.patterLogin{
-  position: absolute;
-  top: -10%;
-  width: 100%;
-  height: 30vh;
+
+.pattern {
+    width: 100%;
+    height: 100%;
+    background-image: url(img/Pattern.svg);
+    background-color: var(--bgColorDarkn);
+    background-repeat: repeat-x;
+    position: absolute;
+}
+
+.layer {
+    background-color: var(--bgColorDarkn);
+    top: 5%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    box-shadow: 1px 0px 18px 10px #000000;
+    border-radius: 150px 150px 0px 0px;
+    position: absolute;
+}
+
+.login-logo {
+    width: 50%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 45%;
+    background-image: unset;
+}
+
+.login-p {
+    color: var(--whiteTextnIcons);
+    font-family: 'Quicksand';
+    font-size: 35px;
+    background-image: unset;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 5%;
+}
+
+.login-form input {
+    background-image: unset;
+}
+
+.login-form button {
+    background-image: unset;
+    height: auto;
+    width: auto;
+    padding: 20px 60px 20px 60px;
+    font-family: 'Quicksand';
+    font-size: 45px;
+    color: var(--whiteTextnIcons);
+    background-color: var(--violet);
+    border-radius: 30px;
+    font-weight: 600;
+    margin-top: 12%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.login-form {
+    background-image: unset;
+    position: relative;
+}
+
+.login-content {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-top: 15%;
+    background-image: unset;
+    position: relative;
+}
+
+.login-username {
+    background-color: var(--sectionFillDark);
+    border-radius: 30px;
+    height: 75px;
+    width: 400px;
+    border: none;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1% 5%;
+}
+
+.login-password {
+    background-color: var(--sectionFillDark);
+    border-radius: 30px;
+    height: 75px;
+    width: 400px;
+    margin-top: 8%;
+    border: none;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1% 5%;
+}
+
+input {
+    color: var(--whiteTextnIcons);
+}
+
+::placeholder {
+    color: var(--whiteTextnIcons);
+    font-family: 'Quicksand';
+    font-size: 35px;
+}
+
+.patterLogin {
+    position: absolute;
+    top: -10%;
+    width: 100%;
+    height: 30vh;
 }
