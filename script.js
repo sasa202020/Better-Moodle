@@ -44,3 +44,20 @@ function getInfo() {
     }
     console.log("incorrect username or password");
 }
+
+// inspiration from https://www.geeksforgeeks.org/how-to-change-input-box-borders-after-filling-the-box-using-javascript/ 
+var borderGreenEmail = document.getElementById("username");
+
+borderGreenEmail.onchange = function(e) {
+    if (borderGreenEmail.value != '') {
+        e.target.style.borderLeft = "10px solid #42d98a";
+    }
+};
+
+var borderGreenPassword = document.getElementById("password");
+
+borderGreenPassword.onchange = function(e) {
+    if (borderGreenPassword.value != '') {
+        e.target.style.borderLeft = "10px solid #42d98a";
+    }
+};
