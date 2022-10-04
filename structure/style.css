@@ -100,6 +100,7 @@
     margin-left: auto;
     margin-right: auto;
     padding: 1% 5%;
+    border-left: 10px solid #fda759;
 }
 
 .login-password {
@@ -114,6 +115,7 @@
     margin-left: auto;
     margin-right: auto;
     padding: 1% 5%;
+    border-left: 10px solid #fda759;
 }
 
 input {
