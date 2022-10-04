@@ -120,6 +120,7 @@
 
 input {
     color: var(--whiteTextnIcons);
+    font-size: 45px;
 }
 
 ::placeholder {
