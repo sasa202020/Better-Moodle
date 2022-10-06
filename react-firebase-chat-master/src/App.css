@@ -70,7 +70,6 @@ form button {
   background-color: rgb(56, 56, 143);
 }
 
-
 input {
   line-height: 1.5;
   width: 100%;
@@ -99,18 +98,15 @@ button:disabled {
   cursor: not-allowed;
 }
 
-
-.sign-in {
+.sign-inG {
   color: #282c34;
   background: white;
   max-width: 400px;
   margin: 0 auto;
 }
 
-
-
-
-ul, li {
+ul,
+li {
   text-align: left;
   list-style: none;
 }
@@ -130,7 +126,6 @@ p {
   display: flex;
   align-items: center;
 }
-
 
 .sent {
   flex-direction: row-reverse;
@@ -152,15 +147,14 @@ img {
   border-radius: 50%;
   margin: 2px 5px;
 }
-.test{
+.test {
   position: absolute;
   top: 0px;
   width: 300px;
   height: 300px;
   background-color: red;
-  
 }
-.notify{
+.notify {
   position: absolute;
   top: 300px;
   left: 100px;

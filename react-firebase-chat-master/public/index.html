@@ -5,10 +5,7 @@
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
+    <meta name="description" content="Web site created using create-react-app" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
 
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
@@ -33,6 +30,22 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div class="test"></div>
     <button class="notify">Click me</button>
+
+    <div id="not-logged-in">
+      <h1>get in here</h1>
+
+      <form onsubmit="login(event)">
+        <input type="text" id="email" placeholder="email" />
+        <input type="password" id="password" placeholder="password" />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <div id="logged-in">
+      <h1>ur in</h1>
+      <button onclick="logout()">logout</button>
+    </div>
+
     <div id="root"></div>
     <!--
       This HTML file is a template.
@@ -44,6 +57,6 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
- 
+    <script type="text/javascript" src="/src/App.js"></script>
   </body>
 </html>
