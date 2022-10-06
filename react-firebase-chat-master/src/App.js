@@ -25,8 +25,6 @@ const firestore = firebase.firestore();
 
 function App() {
 
-
-
   const [user] = useAuthState(auth);
 
   return (
@@ -77,7 +75,6 @@ function ChatRoom() {
 
 
   const sendMessage = async (e) => {
-    
     e.preventDefault();
 
     const { uid, photoURL } = auth.currentUser;
@@ -126,11 +123,5 @@ function ChatMessage(props) {
   </>)
 }
 
-const button = document.querySelector("button")
- button.addEventListener("click", ()=>{
-  Notification.requestPermission().then(perm =>{
-    alert("You have sent message great job buddy")
-  })
- })
 
 export default App;
