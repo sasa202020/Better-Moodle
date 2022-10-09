@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="patternShort"></div>
+    <!--Ahtung!! this div goes to very bottom of body !!!-->
+    <div class="layerLonger">
+      <section class="header">
+        <h1><img src="img/scheduleIconChosen.svg" class="icon" alt="" />&nbspSchedule</h1>
+      </section>
+      <section class="monthContainer">
+        <img src="img/arrowWhiteLeft.svg" class="arrowWhite" alt="" />
+        <h2>September</h2>
+        <img src="img/arrowWhiteRight.svg" class="arrowWhite" alt="" />
+      </section>
+      <section class="weekContainer">
+        <img src="img/arrowWhiteLeft.svg" class="arrowWhite" alt="" />
+        <div class="weekContainerGrid">
+          <p class="weekGridItem">Mon</p>
+          <p class="weekGridItem">Tue</p>
+          <p class="weekGridItem">Wed</p>
+          <p class="weekGridItem">Thu</p>
+          <p class="weekGridItem">Fri</p>
+          <p class="weekGridItem">8</p>
+          <p class="weekGridItem">9</p>
+          <p class="weekGridItem">10</p>
+          <p class="weekGridItem">11</p>
+          <p class="weekGridItem">12</p>
+        </div>
+        <img src="img/arrowWhiteRight.svg" class="arrowWhite" alt="" />
+      </section>
+
+      <section>
+        <div class="oneLessonBox">
+          <p id="lecture1"></p>
+          <p id="time"></p>
+          <p class="room"></p>
+        </div>
+        <div class="oneLessonBox">
+          <p id="lecture2"></p>
+          <p id="time2"></p>
+          <p class="room"></p>
+        </div>
+        <div class="oneLessonBox">
+          <p id="lecture3"></p>
+          <p id="time3"></p>
+          <p class="room"></p>
+        </div>
+        <div class="oneLessonBox">
+          <p id="lecture4"></p>
+          <p id="time4"></p>
+          <p class="room"></p>
+        </div>
+        <div class="oneLessonBox">
+          <p id="lecture5"></p>
+          <p id="time5"></p>
+          <p class="room"></p>
+        </div>
+        <div class="oneLessonBox">
+          <p id="lecture6"></p>
+          <p id="time6"></p>
+          <p class="room"></p>
+        </div>
+      </section>
+      <footer>
+        <img src="/img/profileIconWhite.svg" class="icon" alt="profile icon" />
+        <img src="/img/messageIconWhite.svg" class="icon" alt="messages icon" />
+        <img src="/img/scheduleIconChosen.svg" class="icon" alt="schedule icon" />
+        <img src="/img/notificationIconWhite.svg" class="icon" alt="notification icon" />
+      </footer>
+      <!--end of background div-->
+    </div>
+
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js";
+      import {
+        getFirestore,
+        collection,
+        getDocs,
+      } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyB2nAld9umyImv8SQt5kJxRMIiUcbLWmuE",
+        authDomain: "eleqtus-dd133.firebaseapp.com",
+        databaseURL: "https://eleqtus-dd133-default-rtdb.europe-west1.firebasedatabase.app",
+        projectId: "eleqtus-dd133",
+        storageBucket: "eleqtus-dd133.appspot.com",
+        messagingSenderId: "209389905137",
+        appId: "1:209389905137:web:cb90ebf929964466173550",
+        measurementId: "G-GPBK2FCGGT",
+      };
+
+      initializeApp(firebaseConfig);
+
+      const db = getFirestore();
+
+      const colRef = collection(db, "alexTest");
+
+      getDocs(colRef).then((snapshot) => {
+        let data = [];
+        snapshot.docs.forEach((doc) => {
+          data.push({ ...doc.data(), id: doc.id });
+        });
+        console.log(data);
+
+        //EVERYTHING TO DO WITH THE DAYS ARRAY BETWEEN THESE LINES-----------
+        /*
+              console.log(days);
+              console.log(days[1].id);
+              console.log(days[0].time1);
+              console.log(days[0].time2);
+              console.log(days[1].times);
+              document.getElementById("lesson").innerHTML = days[0].lesson;
+              document.getElementById("room").innerHTML = days[0].room;
+              document.getElementById("time").innerHTML = days[0].time;
+      */
+        console.log(data[0].lesson1);
+
+        document.getElementById("time").innerHTML = data[2].first;
+        document.getElementById("time2").innerHTML = data[2].second;
+        document.getElementById("time3").innerHTML = data[2].third;
+        document.getElementById("time4").innerHTML = data[2].fourth;
+        document.getElementById("time5").innerHTML = data[2].fifth;
+        document.getElementById("time6").innerHTML = data[2].sixth;
+
+        document.getElementById("lecture1").innerHTML = data[0].lesson2;
+        document.getElementById("lecture2").innerHTML = data[0].lesson2;
+        document.getElementById("lecture3").innerHTML = data[0].lesson2;
+        document.getElementById("lecture4").innerHTML = data[0].lesson2;
+        document.getElementById("lecture5").innerHTML = data[0].lesson2;
+        document.getElementById("lecture6").innerHTML = data[0].lesson2;
+
+        /*
+        for (let i = 0; i <= 6; i++) {
+          document.getElementsByClassName("lecture")[i].innerHTML = data[0].lesson1;
+        }*/
+
+        for (let o = 0; o <= 6; o++) {
+          document.getElementsByClassName("room")[o].innerHTML = data[1].room1;
+        }
+
+        //-------------------------------------------------------------------
+      });
+    </script>
+  </body>
+</html>

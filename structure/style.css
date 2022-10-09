@@ -10,7 +10,10 @@
     --orange: #fda759;
     --violet: #8198F6;
 }
-
+body {
+    font-family: 'Quicksand';
+    height: 100%;
+}
 .pattern {
     width: 100%;
     height: 100%;
@@ -166,12 +169,141 @@ input {
     margin-bottom: 10%;
     z-index: 100;
 }
+/*STARt of other pages*/
+.patternShort{
+    left: 0px;
+    top: -50px;
+    width: 100%;
+    height: 40%;
+    background-image: url(img/Pattern.svg);
+    background-color: var(--bgColorDarkn);
+    background-repeat: repeat-x;
+    position: absolute;
+}
+.layerLonger{
+    background-color: var(--bgColorDarkn);
+    top: 8%;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    box-shadow: 0px -6px 5px rgba(0, 0, 0, 0.70);
+    border-radius: 14% 14% 0px 0px;
+    position: absolute;
+}
+h1{
+font-weight: 600;
+font-size: 35px;
+line-height: 44px;
+color: var(--whiteTextnIcons);
+padding: 2%;
+margin: 10px;
+}
+h2{
+font-style: normal;
+font-weight: 500;
+font-size: 25px;
+line-height: 31px;
+padding-left: 10%;
+padding-right: 10%;
+color: var(--bgColorLight);
 
-* {
-    background-color: var(--bgColorDarkn)
+
+}
+.icon{
+width: 30px;
+height: 32px;
+
+}
+.arrowWhite{
+  width: 21px;
+}
+.header{
+    text-align: center;
+}
+.monthContainer{
+   display: flex;
+   justify-content:center ;
+   margin-left: auto;
+   margin-right: auto;
+   width: 50%;
+   background-color:var(--buttonBlue);
+background: rgba(204, 214, 255, 0.15);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 15px;
+max-width: 330px;
+min-width: 250px;
+
+}
+.weekContainer{
+    height: 60px;
+    margin-top: 14px;
+    justify-content:center ;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+    background: rgba(204, 214, 255, 0.15);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: space-between;
+    width: 80%; 
+    height: 80px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.weekContainerGrid{
+    margin-top: 4px;
+    display: grid;
+    grid-template-columns: 54px 54px 54px 54px 54px;
+    grid-template-rows: 30px 30px ;
+}
+.weekGridItem{
+    color: var(--whiteTextnIcons);
+    text-align: center;
+    padding: 10px;
+    margin: 0 ;
+    font-size: 20px;
+
+}
+.oneLessonBox{
+    justify-content:center ;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+    background: rgba(204, 214, 255, 0.15);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 80%;
+    color: var(--whiteTextnIcons);
+    font-size: 20px;
+}
+.room{
+    font-size: 15px;
+    color: var(--violet);
+    position: absolute;
+    right: 15%;
+    margin-top: -45px;
 }
 
+#time,#time2, #time3, #time4, #time5, #time6{
+margin-top: 2.5px;
+padding-bottom: 2.5px;
+margin-left: 6%;
+}
+ #lecture1, #lecture2, #lecture3, #lecture4, #lecture5, #lecture6{
+margin-bottom: 2.5px;
+padding-top: 2.5px;
+margin-left: 6%;
+}
+footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* Rectangle 94 */
+background: #1C153C;
+box-shadow: 3px 0px 10px rgba(0, 0, 0, 0.25);
+border-radius: 50px 50px 0px 0px;
+height: 84px;
 
+}
 /*  hiding Desktop elements for  phone version*/
 
 
