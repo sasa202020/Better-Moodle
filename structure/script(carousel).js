@@ -14,3 +14,5 @@ buttons.forEach(button => {
     delete activeSlide.dataset.active 
    })
 })
+
+// Inspo from https://www.youtube.com/watch?v=9HcxHDS2w1s 
