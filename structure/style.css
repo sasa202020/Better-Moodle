@@ -221,9 +221,50 @@ height: 32px;
 .arrowWhite{
   width: 21px;
 }
+
+
 .header{
     text-align: center;
 }
+.carousel > ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+.carousel{
+    position: relative;
+    width: 100vw;
+height: 14vh;
+}
+
+.slide{
+position: absolute;
+inset: 0;
+opacity: 0;
+right: 3rem;
+}
+
+.slide[data-active] {
+    opacity: 1;
+}
+
+.carosuelbtn{
+    z-index: 99;
+    position: absolute;
+    border: none;
+    font-size: 4rem;
+    color: var(--whiteTextnIcons);
+    background: none;
+}
+
+.carosuelbtn.prev{
+left: 1rem;
+}
+
+.carosuelbtn.next{
+    right: 1rem;
+    }
+
 .monthContainer{
    display: flex;
    justify-content:center ;
