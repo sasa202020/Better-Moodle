@@ -43,6 +43,10 @@ body {
     margin-top: 40%;
     background-image: unset;
 }
+.signout-logo{
+    position: absolute;
+    right: 2vh;
+}
 
 .login-p {
     color: var(--whiteTextnIcons);
@@ -321,4 +325,104 @@ height: 84px;
     .pattern {
         display: none;
     }
+}
+
+/*Profile Page*/
+.profileImgWrapper{
+    position: relative;
+    height: 15vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+.profileImg{
+   display: block;
+    width: 12vh;
+    height: 12vh;
+    background-color: #fbfaff;
+    border-radius: 13px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2vh;
+}
+.profileDetailWrapper{
+    
+}
+.profileDetail{
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.profileCategory{
+    color: #8198F6;
+    margin-bottom: 5px;
+}
+.detail{
+    color: #ffffff;
+    font-size: 15pt;
+    margin-top: 0px;
+}
+.profileUnderline{
+    border-top: 2px solid white;
+    width: 85%;
+}
+.modeSwitchWrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 30px;
+}
+.modeSwitchLight{ 
+    height: 61px;
+    background-color: white;
+    display: flex;
+    opacity: 75%;
+    border-radius: 15px 0 0 15px; 
+}
+.modeSwitchDark{ 
+    display: flex;
+    height: 61px;
+    background-color: #2D264C;
+    border-radius: 0 15px 15px 0;  
+}
+.lightTheme{
+    color: #1C153C;
+    font-size: 1rem;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.darkTheme{
+    color: #ffffff;
+    font-size: 1rem;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.modeIcon{
+    height: 30px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.groupmatcher{
+    background-color: #CCD6FF;
+    color: #1C153C;
+    font-size: 22px;
+    width: 75%;
+    text-align: center;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    border-radius: 15px;
+}
+.groupmatchertxt{
+    position: relative;
+    top: 10px;
+    
+    
 }
