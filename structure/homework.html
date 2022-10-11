@@ -1,91 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="patternShort"></div>
     <!--Ahtung!! this div goes to very bottom of body !!!-->
     <div class="layerLonger">
       <section class="header">
         <h1>Homework</h1>
       </section>
-<!--Monday-->
-      <section id="date">
-
-      </section>
-      <section>
-        <p id="homeworkHeading">
-        </p>
-        <p id="homeworkText">
-
-        </p>
+      <!--Monday-->
+      <section id="date"></section>
+      <section class="notification">
+        <p id="homeworkHeading"></p>
+        <p id="homeworkText"></p>
+        <svg class="minus" width="26" height="4" viewBox="0 0 26 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M23.5625 0H2.4375C1.0918 0 0 0.671875 0 1.5V2.5C0 3.32812 1.0918 4 2.4375 4H23.5625C24.9082 4 26 3.32812 26 2.5V1.5C26 0.671875 24.9082 0 23.5625 0Z"
+            fill="#CCD6FF"
+          />
+        </svg>
       </section>
       <!--tuesday-->
-      <section id="date2">
+      <section id="date2"></section>
+      <section class="notification2">
+        <p id="homeworkHeading2"></p>
+        <p id="homeworkText2"></p>
+        <svg class="minus" width="26" height="4" viewBox="0 0 26 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M23.5625 0H2.4375C1.0918 0 0 0.671875 0 1.5V2.5C0 3.32812 1.0918 4 2.4375 4H23.5625C24.9082 4 26 3.32812 26 2.5V1.5C26 0.671875 24.9082 0 23.5625 0Z"
+            fill="#CCD6FF"
+          />
+        </svg>
+      </section>
 
-    </section>
-    <section>
-      <p id="homeworkHeading2">
-      </p>
-      <p id="homeworkText2">
-
-      </p>
-    </section>
-         <!--end of background div-->
-      </div>
-
+      <footer>
+        <img src="img/profileIconWhite.svg" class="icon" alt="profile icon" />
+        <img src="img/messageIconWhite.svg" class="icon" alt="messages icon" />
+        <img src="img/scheduleIconChosen.svg" class="icon" alt="schedule icon" />
+        <img src="img/notificationIconWhite.svg" class="icon" alt="notification icon" />
+      </footer>
+      <!--end of background div-->
+    </div>
 
     <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js";
-        import {
-          getFirestore,
-          collection,
-          getDocs,
-        } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js";
-  
-        const firebaseConfig = {
-          apiKey: "AIzaSyB2nAld9umyImv8SQt5kJxRMIiUcbLWmuE",
-          authDomain: "eleqtus-dd133.firebaseapp.com",
-          databaseURL: "https://eleqtus-dd133-default-rtdb.europe-west1.firebasedatabase.app",
-          projectId: "eleqtus-dd133",
-          storageBucket: "eleqtus-dd133.appspot.com",
-          messagingSenderId: "209389905137",
-          appId: "1:209389905137:web:cb90ebf929964466173550",
-          measurementId: "G-GPBK2FCGGT",
-        };
-  
-        initializeApp(firebaseConfig);
-  
-        const db = getFirestore();
-  
-        const colRef = collection(db, "homework");
-  
-        getDocs(colRef).then((snapshot) => {
-          let homework = [];
-          snapshot.docs.forEach((doc) => {
-            homework.push({ ...doc.data(), id: doc.id });
-          });
-          console.log(homework);
-          console.log(homework[0].task)
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js";
+      import {
+        getFirestore,
+        collection,
+        getDocs,
+      } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyB2nAld9umyImv8SQt5kJxRMIiUcbLWmuE",
+        authDomain: "eleqtus-dd133.firebaseapp.com",
+        databaseURL: "https://eleqtus-dd133-default-rtdb.europe-west1.firebasedatabase.app",
+        projectId: "eleqtus-dd133",
+        storageBucket: "eleqtus-dd133.appspot.com",
+        messagingSenderId: "209389905137",
+        appId: "1:209389905137:web:cb90ebf929964466173550",
+        measurementId: "G-GPBK2FCGGT",
+      };
+
+      initializeApp(firebaseConfig);
+
+      const db = getFirestore();
+
+      const colRef = collection(db, "homework");
+
+      getDocs(colRef).then((snapshot) => {
+        let homework = [];
+        snapshot.docs.forEach((doc) => {
+          homework.push({ ...doc.data(), id: doc.id });
+        });
+        console.log(homework);
+        console.log(homework[0].task);
 
         document.getElementById("date").innerHTML = homework[0].date;
         document.getElementById("homeworkText").innerHTML = homework[0].task;
         document.getElementById("homeworkHeading").innerHTML = homework[0].homeworkHeading;
         //tuesday
-        
+
         document.getElementById("date2").innerHTML = homework[1].date;
         document.getElementById("homeworkText2").innerHTML = homework[1].task;
         document.getElementById("homeworkHeading2").innerHTML = homework[1].homeworkHeading;
 
-
-  
-          //EVERYTHING TO DO WITH THE DAYS ARRAY BETWEEN THESE LINES-----------
-          /*
+        //EVERYTHING TO DO WITH THE DAYS ARRAY BETWEEN THESE LINES-----------
+        /*
                 console.log(days);
                 console.log(days[1].id);
                 console.log(days[0].time1);
@@ -95,7 +101,7 @@
                 document.getElementById("room").innerHTML = days[0].room;
                 document.getElementById("time").innerHTML = days[0].time;
         */
-    /*
+        /*
   
           document.getElementById("time").innerHTML = data[2].first;
           document.getElementById("time2").innerHTML = data[2].second;
@@ -117,7 +123,6 @@
         */
         //-------------------------------------------------------------------
       });
-
     </script>
-</body>
+  </body>
 </html>
