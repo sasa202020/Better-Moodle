@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet" />
+    <script src="script(carousel).js" defer></script>
   </head>
   <body>
     <div class="patternShort"></div>
@@ -15,11 +16,25 @@
       <section class="header">
         <h1><img src="img/scheduleIconChosen.svg" class="icon" alt="" />&nbspSchedule</h1>
       </section>
+
       <section class="monthContainer">
-        <img src="img/arrowWhiteLeft.svg" class="arrowWhite" alt="" />
-        <h2>September</h2>
-        <img src="img/arrowWhiteRight.svg" class="arrowWhite" alt="" />
+        <div class="carousel" data-carousel>
+          <button class="carosuelbtn prev" data-carousel-button="prev" >&#8617;</button>
+          <button class="carosuelbtn next"  data-carousel-button="next" >&#8618;</button>
+         <ul data-slides>
+          <li class="slide" data-active>
+            <h2>August</h2>
+          </li>
+          <li class="slide">
+            <h2>September</h2>
+          </li>
+          <li class="slide">
+            <h2>October</h2>
+          </li>
+        </ul>
+      </div>
       </section>
+
       <section class="weekContainer">
         <img src="img/arrowWhiteLeft.svg" class="arrowWhite" alt="" />
         <div class="weekContainerGrid">
@@ -74,6 +89,7 @@
         <a href="messages.html"><img src="img/messageIconWhite.svg" class="icon" alt="messages icon" /></a>
          <a href="schedule.html"><img src="img/scheduleIconChosen.svg" class="icon" alt="schedule icon" /></a>
          <a href="notification.html"><img src="img/notificationIconWhite.svg" class="icon" alt="notification icon" /></a>
+        
       </footer>
       <!--end of background div-->
     </div>
