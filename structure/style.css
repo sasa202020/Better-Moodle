@@ -146,18 +146,20 @@ input {
 .buttom-box {
     display: flex;
     justify-content: center;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
 }
 
 .bird {
     height: auto;
     width: 10%;
     position: absolute;
-    bottom: 0;
+    bottom: 2vh;
     margin-bottom: 10%;
 }
 
 .buttom-box p {
-    position: absolute;
     bottom: 0;
     color: var(--whiteTextnIcons);
     font-family: 'Quicksand';
