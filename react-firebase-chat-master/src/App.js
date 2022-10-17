@@ -27,17 +27,20 @@ function App() {
 
   const [user] = useAuthState(auth);
 
-  return (
+  return ( <div class="pattern">
+  <div class="layer">
     <div className="App">
-      <header>
-        <h1>Chat</h1>
+      <header id="chatHeader">
         <SignOut />
+        <h1 id='headerText'>Messages</h1>
       </header>
 
       <section>
         {user ? <ChatRoom /> : <SignIn />}
       </section>
 
+    </div>
+    </div>
     </div>
   );
 }
@@ -67,7 +70,7 @@ function SignOut() {
 function ChatRoom() {
   const dummy = useRef();
   const messagesRef = firestore.collection('messages');
-  const query = messagesRef.orderBy('createdAt').limit(25);
+  const query = messagesRef.orderBy('createdAt').limit(1000);
 
   const [messages] = useCollectionData(query, { idField: 'id' });
 
