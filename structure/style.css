@@ -13,6 +13,7 @@
 body {
     font-family: 'Quicksand';
     height: 100%;
+    width: 100%;
 }
 .pattern {
     width: 100%;
@@ -218,7 +219,13 @@ color: var(--bgColorLight);
 .icon{
 width: 30px;
 height: 32px;
-
+}
+.iconLeft{
+    width: 30px;
+height: 32px;
+position: absolute;
+left:7%;
+top: 24px;
 }
 .arrowWhite{
   width: 21px;
@@ -503,15 +510,48 @@ justify-content: center;
     width: 75%;
     text-align: center;
     height: 50px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 12%;
+    margin-right: 12%;
     margin-top: 5vh;
     margin-bottom: 5vh;
     border-radius: 15px;
 }
-.groupmatchertxt{
-    position: relative;
-    top: 10px;
-    
-    
+/* group match page*/
+.group{
+background: rgba(204, 214, 255, 0.15);
+border-left: 5px solid #42D98A;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 15px;
+color: var(--whiteTextnIcons);
+width: 60%;
+margin-left: auto;
+margin-right: auto;
+}
+.groupHeading{
+font-style: normal;
+font-weight: 700;
+font-size: 25px;
+line-height: 31px;
+margin-left: 14px;
+}
+.groupRole{
+font-weight: 400;
+font-size: 20px;
+line-height: 25px;
+margin-left: 12px;
+}
+.delete-add{
+background-color: var(--buttonBlue);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 6px;
+width: 50px;
+height: 50px;
+margin-right: 0%;
+display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.delete-addFlex{
+   display: flex;
+   justify-content:flex-end;
 }
