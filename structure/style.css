@@ -552,6 +552,30 @@ display: flex;
   align-items: center;
 }
 .delete-addFlex{
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
    display: flex;
-   justify-content:flex-end;
+   justify-content:space-between;
+}
+.centerClass{
+    width: 100%;
+    display: flex;
+  justify-content: center;
+}
+.classSelect{
+	background: url('img/Untitled\ \(1\).svg') no-repeat top right;
+    background-size: 20px 30px;
+	width: 267px;
+	height: 60px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+    color: var(--whiteTextnIcons);
+font-weight: 400;
+font-size: 20px;
+line-height: 25px;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 15px;
+padding: 18px;
 }
