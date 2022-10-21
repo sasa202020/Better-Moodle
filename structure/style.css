@@ -194,25 +194,26 @@ input {
     width: 100%;
     z-index: 99;
     box-shadow: 0px -6px 5px rgba(0, 0, 0, 0.70);
-    border-radius: 14% 14% 0px 0px;
+    border-radius: 60px 60px 0px 0px;
     position: absolute;
+    height: 90%;
 }
 h1{
-font-weight: 600;
-font-size: 35px;
-line-height: 44px;
-color: var(--whiteTextnIcons);
-padding: 2%;
-margin: 10px;
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 44px;
+    color: var(--whiteTextnIcons);
+    padding: 2%;
+    margin: 10px;
 }
 h2{
-font-style: normal;
-font-weight: 500;
-font-size: 25px;
-line-height: 31px;
-padding-left: 10%;
-padding-right: 10%;
-color: var(--bgColorLight);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 31px;
+    padding-left: 10%;
+    padding-right: 10%;
+    color: var(--bgColorLight);
 
 
 }
@@ -352,27 +353,30 @@ footer{
     justify-content: space-around;
     align-items: center;
     /* Rectangle 94 */
-background: #1C153C;
-box-shadow: 3px 0px 10px rgba(0, 0, 0, 0.25);
-border-radius: 50px 50px 0px 0px;
-height: 84px;
+    background: #1C153C;
+    box-shadow: 3px 0px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 50px 50px 0px 0px;
+    height: 84px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 /*homework*/
 #date{
-font-weight: 500;
-font-size: 25px;
-color: var(--whiteTextnIcons);
-background: #8198F6;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 15px;
-height: 59px;
-width: 267px;
-text-align: center;
-margin-left: auto;
-margin-right: auto;
-display: flex;
-flex-direction: column;
-justify-content: center;
+    font-weight: 500;
+    font-size: 25px;
+    color: var(--whiteTextnIcons);
+    background: #8198F6;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    height: 59px;
+    width: 267px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .notification, .notification2{
     position: relative;
@@ -572,10 +576,65 @@ display: flex;
 	-moz-appearance: none;
 	appearance: none;
     color: var(--whiteTextnIcons);
-font-weight: 400;
-font-size: 20px;
-line-height: 25px;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 15px;
-padding: 18px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    padding: 18px;
+}
+/*Messages styling*/
+.message{
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#mess-pic1{
+    width: 70px;
+    height: 70px;
+    background-color: #c0c0c0;
+    border-radius: 15px;
+}
+.mess-head{
+    color: white;
+    font-size: 1.2rem;
+    margin: 0;
+    margin-left:20px ;
+    margin-top: 0px;
+}
+.mess-txt{
+    color: white;
+    margin: 0;
+    margin-left:20px ;
+    margin-top: 5px;
+}
+.timer-txt{
+    color: #8198F6;
+    margin: 0;
+}
+.count{
+    background-color: #42D98A;
+    border-radius: 5px;
+    height: 30px;
+    width: 30px;
+    text-align: center;  
+    position: relative;
+    top: 20px; 
+}
+.count-txt{
+    margin: 0;
+    padding: 3px;
+    font-size: 1.2rem;
+}
+.mess-underline{
+    position: relative;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    border-top: 2px solid white;
+    width: 85%;
+}
+.spacer{
+    height: 5vh;
 }
