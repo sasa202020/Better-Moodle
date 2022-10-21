@@ -230,42 +230,6 @@ top: 24px;
 .header{
     text-align: center;
 }
-.carousel > ul {
-    list-style-type: none;
-    padding: none;
-}
-.carousel{
-    display: flex;
-    height: 14vh;
-    align-content: center;
-    justify-content: center;
-}
-
-.slide{
-opacity: 0;
-
-}
-
-.slide[data-active] {
-    opacity: 1;
-}
-
-.carosuelbtn{
-    z-index: 99;
-    position: absolute;
-    border: none;
-    font-size: 4rem;
-    color: var(--whiteTextnIcons);
-    background: none;
-}
-
-.carosuelbtn.prev{
-left: 6rem;
-}
-
-.carosuelbtn.next{
-    right: 6rem;
-    }
 
 .monthContainer{
    margin-left: auto;
