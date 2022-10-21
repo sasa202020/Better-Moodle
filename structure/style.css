@@ -280,6 +280,18 @@ min-width: 250px;
     
 }
 
+.fade {
+    animation-name: swipe;
+    animation-duration: .8s;
+  }
+  
+  @keyframes swipe {
+    0% { margin-left: -50px; opacity: 0;}
+    20% { margin-left: -50px; opacity: 0%; }
+    35% { margin-left:0px; opacity: 30%;}
+    100% { margin-left:0px; opacity: 100%;}
+  }
+
 .weekContainer{
     height: 60px;
     margin-top: 14px;
