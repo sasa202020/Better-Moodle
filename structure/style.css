@@ -565,7 +565,8 @@ display: flex;
 .centerClass{
     width: 100%;
     display: flex;
-  justify-content: center;
+    flex-direction: row;
+    justify-content: center;
 }
 .classSelect{
 	background: url('img/Untitled\ \(1\).svg') no-repeat top right;
@@ -637,4 +638,30 @@ display: flex;
 }
 .spacer{
     height: 5vh;
+}
+
+.notiSection{
+    display: flex;
+    justify-content: center;
+}
+
+.notiDivs{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--buttonBlue);
+    width: 70%;
+    border-radius: 15px;
+    padding: 1rem;
+}
+
+.notiText{  
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+}
+
+.notiHeader{
+    font-weight: 600;
+    margin-bottom: 0;
 }
