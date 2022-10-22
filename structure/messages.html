@@ -11,23 +11,61 @@
   <body>
     <div class="patternShort"></div>
     <div class="layerLonger">
-        <section class="header">
-            <h1><img src="img/messageIconChosenDark.svg" class="icon" alt="" />&nbspMessages 
-            </h1>
-        </section>
-        <section class="mess-wrapper">
-            <div class="message">
-                <img id="mess-pic1">
-                <div class="message">
-                    <h2 id="mess-head1"></h2>
-                </div>
-            </div>
+      <section class="header">
+        <h1><img src="img/messageIconChosenDark.svg" class="icon" alt="" />&nbspMessages</h1>
+      </section>
+      <section class="mess-wrapper">
+        <div class="message">
+          <img id="mess-pic1" />
+          <div class="message">
+            <h2 id="mess-head1"></h2>
+          </div>
+        </div>
+      </section>
 
-        </section>
-
-    <footer>
-        <a href="profile.html"><img src="img/profileIconWhite.svg" class="icon" alt="profile icon" /></a> 
+      <footer>
+        <a href="profile.html"><img src="img/profileIconWhite.svg" class="icon" alt="profile icon" /></a>
         <a href="messages.html"><img src="img/messageIconChosenDark.svg" class="icon" alt="messages icon" /></a>
         <a href="schedule.html"><img src="img/scheduleIconWhite.svg" class="icon" alt="schedule icon" /></a>
         <a href="notification.html"><img src="img/notificationIconWhite.svg" class="icon" alt="notification icon" /></a>
-    </footer>
+      </footer>
+    </div>
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js";
+      import {
+        getFirestore,
+        collection,
+        getDocs,
+      } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyB2nAld9umyImv8SQt5kJxRMIiUcbLWmuE",
+        authDomain: "eleqtus-dd133.firebaseapp.com",
+        databaseURL: "https://eleqtus-dd133-default-rtdb.europe-west1.firebasedatabase.app",
+        projectId: "eleqtus-dd133",
+        storageBucket: "eleqtus-dd133.appspot.com",
+        messagingSenderId: "209389905137",
+        appId: "1:209389905137:web:cb90ebf929964466173550",
+        measurementId: "G-GPBK2FCGGT",
+      };
+
+      initializeApp(firebaseConfig);
+
+      const db = getFirestore();
+
+      const colRef = collection(db, "messages");
+
+      getDocs(colRef).then((snapshot) => {
+        let messsages = [];
+        snapshot.docs.forEach((doc) => {
+          messsages.push({ ...doc.data(), id: doc.id });
+        });
+        console.log(messsages);
+
+        //EVERYTHING TO DO WITH THE DAYS ARRAY BETWEEN THESE LINES-----------
+
+        //-------------------------------------------------------------------
+      });
+    </script>
+  </body>
+</html>
