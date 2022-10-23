@@ -13,6 +13,7 @@
 
 body {
   background-color: var(--bgColorDarkn);
+  font-family: 'Quicksand';
 }
 
 .pattern {
@@ -90,7 +91,7 @@ main::-webkit-scrollbar-thumb {
 form {
   height: 10vh;
   position: fixed;
-  bottom: 0;
+  bottom: 6rem;
   background-color: rgb(24, 23, 23);
   width: 100%;
   max-width: 728px;
@@ -187,10 +188,27 @@ p {
   color: black;
 }
 
-img {
+.pp {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   margin: 2px 5px;
 }
 
+footer{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* Rectangle 94 */
+  background: #1C153C;
+  box-shadow: 3px 0px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 50px 50px 0px 0px;
+  height: 84px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.icon{
+  width: 30px;
+  height: 32px;
+  }

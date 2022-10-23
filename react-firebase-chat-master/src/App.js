@@ -9,6 +9,7 @@ import 'firebase/analytics';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 
+
 firebase.initializeApp({
   apiKey: "AIzaSyB2nAld9umyImv8SQt5kJxRMIiUcbLWmuE",
   authDomain: "eleqtus-dd133.firebaseapp.com",
@@ -27,21 +28,29 @@ function App() {
 
   const [user] = useAuthState(auth);
 
-  return ( <div class="pattern">
-  <div class="layer">
-    <div className="App">
-      <header id="chatHeader">
-        <SignOut />
-        <h1 id='headerText'>Messages</h1>
-      </header>
+  return (<div class="pattern">
+    <div class="layer">
+      <div className="App">
+        <header id="chatHeader">
+          <SignOut />
+          <h1 id='headerText'>Messages</h1>
+        </header>
 
-      <section>
-        {user ? <ChatRoom /> : <SignIn />}
-      </section>
-
+        <section>
+          {user ? <ChatRoom /> : <SignIn />}
+        </section>
+        <footer>
+          <a href="profile.html"><img src="img/profileIconWhite.svg" class="icon" alt="profile icon" /></a>
+          <a href="messages.html"><img src="img/messageIconChosenDark.svg" class="icon" alt="messages icon" /></a>
+          <a href="schedule.html"><img src="img/scheduleIconWhite.svg" class="icon" alt="schedule icon" /></a>
+          <a href="notification.html"><img src="img/notificationIconWhite.svg" class="icon" alt="notification icon" /></a>
+        </footer>
+        
+      </div>
+     
     </div>
-    </div>
-    </div>
+   
+  </div>
   );
 }
 
@@ -114,17 +123,16 @@ function ChatRoom() {
 
 
 function ChatMessage(props) {
-  const { text, uid, photoURL} = props.message;
+  const { text, uid, photoURL } = props.message;
 
   const messageClass = uid === auth.currentUser.uid ? 'sent' : 'received';
 
   return (<>
     <div className={`message ${messageClass}`}>
-    <img src={photoURL || 'https://api.adorable.io/avatars/23/abott@adorable.png'} />
+      <img src={photoURL || 'https://api.adorable.io/avatars/23/abott@adorable.png'} class="pp" />
       <p>{text}</p>
     </div>
   </>)
 }
-
 
 export default App;
