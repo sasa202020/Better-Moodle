@@ -236,6 +236,68 @@ top: 24px;
 .header{
     text-align: center;
 }
+
+.monthContainer{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    background-color:var(--buttonBlue);
+ background: rgba(204, 214, 255, 0.15);
+ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+ border-radius: 15px;
+ max-width: 330px;
+ min-width: 250px;
+ }
+ 
+ .month-slide{
+     display: none;
+     height: 60px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     padding: 10px;
+ }
+ 
+ .prev, .next {
+     cursor: pointer;
+     position: absolute;
+     top: 9.3%;
+     width: auto;
+     padding: 0;
+     color: white;
+     font-weight: bold;
+     font-size: 35px;
+     transition: 0.6s ease;
+     user-select: none;
+ }
+ 
+ .next {
+     right: 25%;
+   }
+ 
+ .prev {
+     left: 25%;
+   }
+ 
+ .name-of-month{
+     color: var(--whiteTextnIcons);
+     font-size: 25px;
+     text-align: center;
+ 
+ }
+ 
+ .fade {
+     animation-name: swipe;
+     animation-duration: .8s;
+   }
+ 
+   @keyframes swipe {
+     0% { margin-left: -50px; opacity: 0;}
+     20% { margin-left: -50px; opacity: 0%; }
+     35% { margin-left:0px; opacity: 30%;}
+     100% { margin-left:0px; opacity: 100%;}
+   }
+
 .carousel > ul {
     padding: 0;
     margin: 0;
@@ -275,20 +337,7 @@ left: 1rem;
     right: 1rem;
     }
 
-.monthContainer{
-   display: flex;
-   justify-content:center ;
-   margin-left: auto;
-   margin-right: auto;
-   width: 50%;
-   background-color:var(--buttonBlue);
-background: rgba(204, 214, 255, 0.15);
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 15px;
-max-width: 330px;
-min-width: 250px;
 
-}
 .weekContainer{
     height: 60px;
     margin-top: 14px;
