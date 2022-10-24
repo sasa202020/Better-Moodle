@@ -4,12 +4,7 @@
     <link rel="stylesheet" href="style.css" />
     <title>JavaScript Simple Login System</title>
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet" />
-    <script type="module">
-      // Import the functions you need from the SDKs you need import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js"; import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-analytics.js"; // TODO:
-      Add SDKs for Firebase products that you want to use // https://firebase.google.com/docs/web/setup#available-libraries // Your web app's Firebase configuration // For Firebase JS SDK v7.20.0 and later, measurementId is optional const firebaseConfig
-      = { apiKey: "AIzaSyB2nAld9umyImv8SQt5kJxRMIiUcbLWmuE", authDomain: "eleqtus-dd133.firebaseapp.com", projectId: "eleqtus-dd133", storageBucket: "eleqtus-dd133.appspot.com", messagingSenderId: "209389905137", appId: "1:209389905137:web:cb90ebf929964466173550",
-      measurementId: "G-GPBK2FCGGT" }; // Initialize Firebase const app = initializeApp(firebaseConfig); const analytics = getAnalytics(app);
-    </script>
+    <link rel="manifest" href="manifest.json" />
   </head>
 
   <body>
@@ -33,6 +28,11 @@
       <img src="img/logomark.png" class="bird" />
       <p>Problems with Log In? click here</p>
     </div>
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("/service-worker.js");
+      }
+    </script>
     <script src="script(old+bordersOnLogin).js"></script>
   </body>
 </html>
