@@ -1,7 +1,7 @@
 {
   "name": "Eleqtus",
   "short_name": "Eleqtus",
-  "start_url": "/?home=true",
+  "start_url": "https://mponline.one/structure/index.html",
   "icons": [
     {
       "src": "icons/manifest-icon-192.maskable.png",
