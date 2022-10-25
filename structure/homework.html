@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="apple-touch-icon" href="/icons/appleIcon.png" />
+    <meta name="theme-color" content="#CCD6FF" />
     <title>Document</title>
   </head>
   <body>
@@ -39,8 +43,8 @@
         </svg>
       </section>
       <footer>
-       <a href="profile.html"><img src="img/profileIconWhite.svg" class="icon" alt="profile icon" /></a> 
-       <a href="messages.html"><img src="img/messageIconWhite.svg" class="icon" alt="messages icon" /></a>
+        <a href="profile.html"><img src="img/profileIconWhite.svg" class="icon" alt="profile icon" /></a>
+        <a href="messages.html"><img src="img/messageIconWhite.svg" class="icon" alt="messages icon" /></a>
         <a href="schedule.html"><img src="img/scheduleIconChosen.svg" class="icon" alt="schedule icon" /></a>
         <a href="notification.html"><img src="img/notificationIconWhite.svg" class="icon" alt="notification icon" /></a>
       </footer>
@@ -122,6 +126,11 @@
         */
         //-------------------------------------------------------------------
       });
+    </script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("/service-worker.js");
+      }
     </script>
   </body>
 </html>

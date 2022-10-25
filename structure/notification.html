@@ -5,28 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="apple-touch-icon" href="/icons/appleIcon.png" />
+    <meta name="theme-color" content="#CCD6FF" />
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet" />
   </head>
   <body>
     <div class="patternShort"></div>
     <div class="layerLonger">
-        <section class="header">
-            <h1><img src="img/notificationIconChosen.svg" class="icon" alt="" />&nbspNotifications
-            </h1>
-        </section>
-        <section class="notiSection">
-           <div class="notiDivs">
-            <p class="notiHeader notiText">Homework</p>
-            <p class="notiText">Work Work</p>
-           </div>
-        </section>
+      <section class="header">
+        <h1><img src="img/notificationIconChosen.svg" class="icon" alt="" />&nbspNotifications</h1>
+      </section>
+      <section class="notiSection">
+        <div class="notiDivs">
+          <p class="notiHeader notiText">Homework</p>
+          <p class="notiText">Work Work</p>
+        </div>
+      </section>
 
-    <footer>
-        <a href="profile.html"><img src="img/profileIconWhite.svg" class="icon" alt="profile icon" /></a> 
+      <footer>
+        <a href="profile.html"><img src="img/profileIconWhite.svg" class="icon" alt="profile icon" /></a>
         <a href="messages.html"><img src="img/messageIconWhite.svg" class="icon" alt="messages icon" /></a>
         <a href="schedule.html"><img src="img/scheduleIconWhite.svg" class="icon" alt="schedule icon" /></a>
-        <a href="notification.html"><img src="img/notificationIconChosen.svg" class="icon" alt="notification icon" /></a>
-    </footer>
+        <a href="notification.html"
+          ><img src="img/notificationIconChosen.svg" class="icon" alt="notification icon"
+        /></a>
+      </footer>
     </div>
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("/service-worker.js");
+      }
+    </script>
   </body>
+</html>

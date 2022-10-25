@@ -7,6 +7,9 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="apple-touch-icon" href="/icons/appleIcon.png" />
+    <meta name="theme-color" content="#CCD6FF" />
     <script src="script(carousel).js" defer></script>
   </head>
   <body>
@@ -19,24 +22,17 @@
 
       <section class="monthContainer">
         <div class="month-slide fade">
-          <div class="name-of-month">
-            August 
-          </div>
+          <div class="name-of-month">August</div>
         </div>
         <div class="month-slide fade">
-          <div class="name-of-month">
-            September 
-          </div>
+          <div class="name-of-month">September</div>
         </div>
         <div class="month-slide fade">
-          <div class="name-of-month">
-            October 
-          </div>
+          <div class="name-of-month">October</div>
         </div>
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
-       
-    </section>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </section>
 
       <section class="weekContainer">
         <img src="img/arrowWhiteLeft.svg" class="arrowWhite" alt="" />
@@ -89,13 +85,13 @@
       </section>
       <a href="homework.html">
         <button class="groupmatcher">View homework</button>
-    </a>
+      </a>
 
       <footer>
-        <a href="profile.html"><img src="img/profileIconWhite.svg" class="icon" alt="profile icon" /></a> 
+        <a href="profile.html"><img src="img/profileIconWhite.svg" class="icon" alt="profile icon" /></a>
         <a href="messages.html"><img src="img/messageIconWhite.svg" class="icon" alt="messages icon" /></a>
-         <a href="schedule.html"><img src="img/scheduleIconChosen.svg" class="icon" alt="schedule icon" /></a>
-         <a href="notification.html"><img src="img/notificationIconWhite.svg" class="icon" alt="notification icon" /></a>
+        <a href="schedule.html"><img src="img/scheduleIconChosen.svg" class="icon" alt="schedule icon" /></a>
+        <a href="notification.html"><img src="img/notificationIconWhite.svg" class="icon" alt="notification icon" /></a>
       </footer>
       <!--end of background div-->
     </div>
@@ -170,6 +166,11 @@
 
         //-------------------------------------------------------------------
       });
+    </script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("/service-worker.js");
+      }
     </script>
   </body>
 </html>
