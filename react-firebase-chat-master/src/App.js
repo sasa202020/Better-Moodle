@@ -40,10 +40,10 @@ function App() {
           {user ? <ChatRoom /> : <SignIn />}
         </section>
         <footer>
-          <a href="profile.html"><img src="img/profileIconWhite.svg" class="icon" alt="profile icon" /></a>
-          <a href="messages.html"><img src="img/messageIconChosenDark.svg" class="icon" alt="messages icon" /></a>
-          <a href="schedule.html"><img src="img/scheduleIconWhite.svg" class="icon" alt="schedule icon" /></a>
-          <a href="notification.html"><img src="img/notificationIconWhite.svg" class="icon" alt="notification icon" /></a>
+          <a href="https://mponline.one/structure/profile.html"><img src="img/profileIconWhite.svg" class="icon" alt="profile icon" /></a>
+          <a href="https://mponline.one/structure/messages.html"><img src="img/messageIconChosenDark.svg" class="icon" alt="messages icon" /></a>
+          <a href="https://mponline.one/structure/schedule.html"><img src="img/scheduleIconWhite.svg" class="icon" alt="schedule icon" /></a>
+          <a href="https://mponline.one/structure/notification.html"><img src="img/notificationIconWhite.svg" class="icon" alt="notification icon" /></a>
         </footer>
         
       </div>
