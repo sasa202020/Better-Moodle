@@ -9,7 +9,7 @@
     <link rel="manifest" href="manifest.json" />
     <link rel="apple-touch-icon" href="/icons/appleIcon.png" />
     <meta name="theme-color" content="#CCD6FF" />
-    <link rel="stylesheet" href="style.css" />
+    <link id="pagestyle" href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
     <div class="patternShort"></div>
@@ -57,14 +57,41 @@
           <button class="groupmatcher">Group matcher</button>
         </a>
       </section>
+      <button onclick="themeSwitch()">switch</button>
+
       <footer>
         <a href="profile.html"><img src="img/profileIconChosen.svg" class="icon" alt="profile icon" /></a>
-        <a href="messages.html"><img src="img/messageIconWhite.svg" class="icon" alt="messages icon" /></a>
-        <a href="schedule.html"><img src="img/scheduleIconWhite.svg" class="icon" alt="schedule icon" /></a>
-        <a href="notification.html"><img src="img/notificationIconWhite.svg" class="icon" alt="notification icon" /></a>
+        <a href="messages.html"><img id="image2" src="img/messageIconWhite.svg" class="icon" alt="messages icon" /></a>
+        <a id="3" href="schedule.html"
+          ><img id="image3" src="img/scheduleIconWhite.svg" class="icon" alt="schedule icon"
+        /></a>
+        <a id="4" href="notification.html"
+          ><img id="image4" src="img/notificationIconWhite.svg" class="icon" alt="notification icon"
+        /></a>
       </footer>
       <!--end of background div-->
     </div>
+    <script>
+      function themeSwitch() {
+        const boxes = document.querySelectorAll(".layerLonger");
+        boxes.forEach((box) => {
+          box.style.backgroundColor = "white";
+        });
+        const boxes2 = document.querySelectorAll(".patternShort");
+        boxes2.forEach((box2) => {
+          box2.style.backgroundColor = "white";
+        });
+        const footers = document.querySelectorAll("footer");
+        footers.forEach((footer) => {
+          footer.style.backgroundColor = "white";
+        });
+        document.querySelectorAll("p").forEach((e) => (e.style.color = "#1C153C"));
+        document.querySelectorAll("h1").forEach((b) => (b.style.color = "#1C153C"));
+        document.getElementById("image2").src = "img/messageIconChosenDark.svg";
+        document.getElementById("image3").src = "img/scheduleIconChosen.svg";
+        document.getElementById("image4").src = "img/notificationIconChosen.svg";
+      }
+    </script>
     <script>
       if ("serviceWorker" in navigator) {
         navigator.serviceWorker.register("/service-worker.js");

@@ -813,3 +813,8 @@ span {
   font-weight: 600;
   margin-bottom: 0;
 }
+
+button {
+  position: absolute;
+  top: 20%;
+}
