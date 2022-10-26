@@ -26,6 +26,9 @@ borderGreenEmail.onchange = function(e) {
     if (borderGreenEmail.value != '') {
         e.target.style.borderLeft = "10px solid #42d98a";
     }
+    else {
+        e.target.style.borderLeft = "10px solid #fda759";
+    }
 };
 
 var borderGreenPassword = document.getElementById("password");
@@ -33,5 +36,8 @@ var borderGreenPassword = document.getElementById("password");
 borderGreenPassword.onchange = function(e) {
     if (borderGreenPassword.value != '') {
         e.target.style.borderLeft = "10px solid #42d98a";
+    }
+    else {
+        e.target.style.borderLeft = "10px solid #fda759";
     }
 };
