@@ -13,7 +13,6 @@
 
 body {
   background-color: var(--bgColorDarkn);
-  font-family: 'Quicksand';
 }
 
 .pattern {
@@ -63,7 +62,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 100vh;
+  max-height: 60vh;
   background-color: var(--bgColorDarkn);
 }
 
